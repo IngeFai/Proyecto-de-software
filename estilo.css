@@ -1,0 +1,281 @@
+y /* Estilo general del cuerpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* Fondo claro para el cuerpo */
+    color: #333; /* Texto oscuro para mejor legibilidad */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado con imagen de fondo */
+header {
+    background-image: url('Imágenes/fondo\ encabezado.png'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover; /* Asegura que la imagen cubra el contenedor sin estirarse */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen mientras se desplaza el contenido */
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+
+/* Menú de navegación arriba del título en el encabezado */
+#menu-informacion {
+    display: flex;
+    justify-content: center; /* Centrar el menú */
+    width: 100%;
+    margin-bottom: 10px; /* Añade margen debajo del menú para separarlo del título */
+    gap: 20px; /* Espacio entre los enlaces */
+    position: absolute;
+    top: 20px; /* Posiciona el menú en la parte superior del encabezado */
+}
+
+/* Estilo para los enlaces del menú de navegación */
+#menu-informacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: contents;
+}
+
+#menu-informacion li {
+    margin: 0 20px; /* Ajusta el espacio entre los ítems */
+}
+
+#menu-informacion a {
+    background-color: #0f07f7; /* Fondo azul oscuro para los botones/cajones */
+    color: white;
+    padding: 10px 20px; /* Espaciado para parecer botones */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#menu-informacion a:hover {
+    background-color: #00bfff; /* Cambia de color al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* Estilo del título en el encabezado */
+header h1 {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 20px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 70px; /* Añadimos margen superior para que el título esté más abajo */
+}
+
+
+/* Estilo del título en el encabezado */
+header h1 {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    padding: 10px 30px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 56px;
+    letter-spacing: 2px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Fondo degradado con efecto más llamativo */
+#contenedor-cajas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    background: url('Imágenes/fondo\ body.jpg'); /* Aquí asegúrate de que la ruta de la imagen sea correcta */
+    background-size: 100% 100%; /* Escalamos para darle más espacio al movimiento */
+    animation: fondoDinamico 8s ease-in-out infinite; /* Animación que dura 8 segundos y se repite infinitamente */
+    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.3); /* Sombra interna */
+}
+
+/* Estilo para las secciones de login y crear cuenta */
+#login, #crear-cuenta {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra 3D */
+    width: 100%;
+    max-width: 280px; /* Reducimos el ancho para que sean más pequeños */
+    text-align: center;
+    margin: 20px auto; /* Centramos y ajustamos el margen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    perspective: 1000px; /* Perspectiva 3D */
+}
+
+/* Efecto hover con 3D */
+#login:hover, #crear-cuenta:hover {
+    transform: translateY(-10px) rotateX(3deg); /* Efecto de elevación y rotación */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada en hover */
+}
+
+/* Estilo de los títulos y etiquetas en los formularios */
+#login h2, #crear-cuenta h2 {
+    color: #333333;
+    font-size: 20px; /* Tamaño de fuente más pequeño */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Estilo de las etiquetas */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px; /* Fuente más pequeña */
+    color: #555555;
+}
+
+/* Estilo de los inputs */
+#login input, #crear-cuenta input {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 240px; /* Inputs más estrechos */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+    background-color: #f9f9f9;
+    color: #333333;
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Leve sombra interna */
+    transition: box-shadow 0.2s ease;
+}
+
+/* Hover y foco en los inputs */
+#login input:focus, #crear-cuenta input:focus {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Resaltado azul en foco */
+    border-color: #007BFF;
+}
+
+/* Estilo de los botones */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    max-width: 240px; /* Botones más pequeños */
+    border-radius: 6px;
+    font-size: 16px; /* Tamaño de fuente ajustado */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto suave */
+}
+
+/* Hover con 3D en los botones */
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px) rotateX(2deg); /* Efecto 3D al elevarse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Efecto de clic en los botones */
+button:active {
+    transform: translateY(2px); /* Simulación de clic */
+    background-color: #004080; /* Color más oscuro al hacer clic */
+}
+
+
+/* Footer con imágenes, enlaces y texto elegante */
+footer {
+    padding: 15px 20px; /* Aumentamos un poco el padding */
+    background-color: #fcf7f7;
+    color: #1d1d1d;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+    display: flex;
+    justify-content: space-between; /* Alineamos las imágenes y el texto */
+    align-items: center;
+    height: auto;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, sans-serif; /* Elegante y moderna */
+}
+
+/* Alineación de las imágenes a la izquierda y derecha */
+footer .left-image, footer .right-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Alinea la imagen de la izquierda */
+}
+
+footer .right-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinea la imagen de la derecha */
+}
+
+/* Ajuste de las imágenes en el footer */
+footer img {
+    height: 60px; /* Tamaño uniforme para las imágenes */
+    width: auto;
+    margin: 0 10px; /* Añadimos margen para un mejor espaciado */
+    display: block; /* Aseguramos que las imágenes estén alineadas correctamente */
+}
+
+/* Texto centrado y elegante en el footer */
+.footer-text {
+    flex: 2; /* Para que el texto se centre ocupando más espacio */
+    text-align: center;
+    z-index: 2;
+}
+
+.footer-text p {
+    margin: 0;
+    color: #333;
+    font-size: 14px; /* Tamaño de fuente más pequeño y elegante */
+}
+
+.footer-text a {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Ajustes generales para pantallas pequeñas */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-text {
+        margin-top: 10px;
+    }
+    
+    footer img {
+        margin-bottom: 10px;
+    }
+}
