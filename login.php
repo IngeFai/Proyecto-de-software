@@ -13,6 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verificar si el usuario existe
     $query = "SELECT * FROM usuarios WHERE email = ?";
     $stmt = $conn->prepare($query);
+
+    if (!$stmt) {
+        die("Error en la preparación de la consulta: " . $conn->error);
+    }
+
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -21,6 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $result->fetch_assoc();
         
         // Verificar la contraseña
+        echo "Contraseña ingresada: " . $password . "<br>";
+        echo "Contraseña hash en la base de datos: " . $user['password'] . "<br>";
+
         if (password_verify($password, $user['password'])) {
             $_SESSION['email'] = $user['email'];
             $_SESSION['nombre'] = $user['nombre'];
